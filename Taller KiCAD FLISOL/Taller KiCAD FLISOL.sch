@@ -1,0 +1,88 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L ATTINY85-20PU-ND:ATTINY85-20PU-ND U?
+U 1 1 5CC3FCFE
+P 4200 2650
+F 0 "U?" H 4428 2653 60  0000 L CNN
+F 1 "ATTINY85-20PU-ND" H 4428 2547 60  0000 L CNN
+F 2 "digikey-footprints:DIP-8_W7.62mm" H 4430 2943 60  0001 L CNN
+F 3 "" H 4400 2950 60  0001 L CNN
+	1    4200 2650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x06_Female J?
+U 1 1 5CC3FDFB
+P 5350 2000
+F 0 "J?" V 5290 1612 50  0000 R CNN
+F 1 "Conn_01x06_Female" V 5199 1612 50  0000 R CNN
+F 2 "" H 5350 2000 50  0001 C CNN
+F 3 "~" H 5350 2000 50  0001 C CNN
+	1    5350 2000
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5150 2200 5150 2450
+Wire Wire Line
+	5150 2450 4400 2450
+Wire Wire Line
+	5250 2200 5250 2550
+Wire Wire Line
+	5250 2550 4400 2550
+Wire Wire Line
+	5350 2200 5350 2650
+Wire Wire Line
+	5350 2650 4400 2650
+Wire Wire Line
+	5450 2200 5450 2750
+Wire Wire Line
+	5450 2750 4400 2750
+Wire Wire Line
+	5550 2200 5550 2850
+Wire Wire Line
+	5550 2850 4400 2850
+Wire Wire Line
+	5650 2200 5650 2950
+Wire Wire Line
+	5650 2950 4400 2950
+$Comp
+L power:GND #PWR?
+U 1 1 5CC4003B
+P 4100 3400
+F 0 "#PWR?" H 4100 3150 50  0001 C CNN
+F 1 "GND" H 4105 3227 50  0000 C CNN
+F 2 "" H 4100 3400 50  0001 C CNN
+F 3 "" H 4100 3400 50  0001 C CNN
+	1    4100 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 3400 4100 3150
+$Comp
+L power:+5V #PWR?
+U 1 1 5CC40137
+P 4100 2000
+F 0 "#PWR?" H 4100 1850 50  0001 C CNN
+F 1 "+5V" H 4115 2173 50  0000 C CNN
+F 2 "" H 4100 2000 50  0001 C CNN
+F 3 "" H 4100 2000 50  0001 C CNN
+	1    4100 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2000 4100 2250
+$EndSCHEMATC
