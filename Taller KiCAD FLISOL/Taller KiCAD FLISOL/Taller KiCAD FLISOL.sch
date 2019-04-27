@@ -1,0 +1,371 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L dk_Embedded-Microcontrollers:ATTINY85-20PU U2
+U 1 1 5CC471DA
+P 6450 1750
+F 0 "U2" H 6678 1753 60  0000 L CNN
+F 1 "ATTINY85-20PU" H 6678 1647 60  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 6650 1950 60  0001 L CNN
+F 3 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en589894" H 6650 2050 60  0001 L CNN
+F 4 "ATTINY85-20PU-ND" H 6650 2150 60  0001 L CNN "Digi-Key_PN"
+F 5 "ATTINY85-20PU" H 6650 2250 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 6650 2350 60  0001 L CNN "Category"
+F 7 "Embedded - Microcontrollers" H 6650 2450 60  0001 L CNN "Family"
+F 8 "http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en589894" H 6650 2550 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/microchip-technology/ATTINY85-20PU/ATTINY85-20PU-ND/735469" H 6650 2650 60  0001 L CNN "DK_Detail_Page"
+F 10 "IC MCU 8BIT 8KB FLASH 8DIP" H 6650 2750 60  0001 L CNN "Description"
+F 11 "Microchip Technology" H 6650 2850 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 6650 2950 60  0001 L CNN "Status"
+	1    6450 1750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:LM7805_TO220 U1
+U 1 1 5CC4735C
+P 3800 1600
+F 0 "U1" H 3800 1842 50  0000 C CNN
+F 1 "LM7805_TO220" H 3800 1751 50  0000 C CNN
+F 2 "Package_TO_SOT_THT:TO-220-3_Vertical" H 3800 1825 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM7805.pdf" H 3800 1550 50  0001 C CNN
+	1    3800 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 1600 4200 1600
+$Comp
+L power:GND #PWR05
+U 1 1 5CC474D4
+P 6350 2500
+F 0 "#PWR05" H 6350 2250 50  0001 C CNN
+F 1 "GND" H 6355 2327 50  0000 C CNN
+F 2 "" H 6350 2500 50  0001 C CNN
+F 3 "" H 6350 2500 50  0001 C CNN
+	1    6350 2500
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 2500 6350 2250
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5CC4762B
+P 1200 1750
+F 0 "J1" H 1255 2217 50  0000 C CNN
+F 1 "USB_B_Micro" H 1255 2126 50  0000 C CNN
+F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 1350 1700 50  0001 C CNN
+F 3 "~" H 1350 1700 50  0001 C CNN
+	1    1200 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR02
+U 1 1 5CC47737
+P 1900 1200
+F 0 "#PWR02" H 1900 1050 50  0001 C CNN
+F 1 "+5V" H 1915 1373 50  0000 C CNN
+F 2 "" H 1900 1200 50  0001 C CNN
+F 3 "" H 1900 1200 50  0001 C CNN
+	1    1900 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1900 1200 1900 1550
+Wire Wire Line
+	1900 1550 1500 1550
+$Comp
+L power:GND #PWR01
+U 1 1 5CC4778F
+P 1200 2400
+F 0 "#PWR01" H 1200 2150 50  0001 C CNN
+F 1 "GND" H 1205 2227 50  0000 C CNN
+F 2 "" H 1200 2400 50  0001 C CNN
+F 3 "" H 1200 2400 50  0001 C CNN
+	1    1200 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 1050 6350 1350
+Text Label 4350 1600 0    50   ~ 0
+5V_Reg
+Text Label 6350 1150 2    50   ~ 0
+5V_Reg
+Wire Notes Line
+	2450 500  2450 2750
+Text Notes 1000 750  0    157  ~ 0
+USB
+Wire Notes Line
+	5450 450  5450 2750
+Wire Notes Line
+	500  2750 5450 2750
+Text GLabel 1950 1750 2    50   Input ~ 0
+D+
+Text GLabel 1950 1850 2    50   Input ~ 0
+D-
+NoConn ~ 1500 1950
+$Comp
+L Device:D D1
+U 1 1 5CC48918
+P 4200 1400
+F 0 "D1" V 4246 1321 50  0000 R CNN
+F 1 "D" V 4155 1321 50  0000 R CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P5.08mm_Vertical_KathodeUp" H 4200 1400 50  0001 C CNN
+F 3 "~" H 4200 1400 50  0001 C CNN
+	1    4200 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5CC48A74
+P 4200 1200
+F 0 "#PWR04" H 4200 1050 50  0001 C CNN
+F 1 "+5V" H 4215 1373 50  0000 C CNN
+F 2 "" H 4200 1200 50  0001 C CNN
+F 3 "" H 4200 1200 50  0001 C CNN
+	1    4200 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4200 1200 4200 1250
+Wire Wire Line
+	4200 1550 4200 1600
+Connection ~ 4200 1600
+Wire Wire Line
+	4200 1600 4450 1600
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 5CC490AD
+P 3050 850
+F 0 "J2" V 3110 890 50  0000 L CNN
+F 1 "Conn_01x02_Male" V 3201 890 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 3050 850 50  0001 C CNN
+F 3 "~" H 3050 850 50  0001 C CNN
+	1    3050 850 
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3050 1050 3050 1600
+Wire Wire Line
+	3050 1600 3250 1600
+Wire Wire Line
+	2950 1050 2950 2150
+Wire Wire Line
+	2950 2150 3250 2150
+Wire Wire Line
+	3800 2150 3800 2000
+$Comp
+L power:GND #PWR03
+U 1 1 5CC4936D
+P 3800 2250
+F 0 "#PWR03" H 3800 2000 50  0001 C CNN
+F 1 "GND" H 3805 2077 50  0000 C CNN
+F 2 "" H 3800 2250 50  0001 C CNN
+F 3 "" H 3800 2250 50  0001 C CNN
+	1    3800 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 2250 3800 2150
+Connection ~ 3800 2150
+$Comp
+L Device:C C1
+U 1 1 5CC495A1
+P 3250 1800
+F 0 "C1" H 3365 1846 50  0000 L CNN
+F 1 "0.33uF" H 3365 1755 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 3288 1650 50  0001 C CNN
+F 3 "~" H 3250 1800 50  0001 C CNN
+	1    3250 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5CC495F5
+P 4450 1850
+F 0 "C2" H 4565 1896 50  0000 L CNN
+F 1 "0.1uF" H 4565 1805 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P2.50mm" H 4488 1700 50  0001 C CNN
+F 3 "~" H 4450 1850 50  0001 C CNN
+	1    4450 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 1700 4450 1600
+Connection ~ 4450 1600
+Wire Wire Line
+	4450 1600 4800 1600
+Wire Wire Line
+	3250 1650 3250 1600
+Connection ~ 3250 1600
+Wire Wire Line
+	3250 1600 3500 1600
+Wire Wire Line
+	3250 1950 3250 2150
+Connection ~ 3250 2150
+Wire Wire Line
+	3250 2150 3800 2150
+Wire Wire Line
+	4450 2000 3800 2000
+Connection ~ 3800 2000
+Wire Wire Line
+	3800 2000 3800 1900
+$Comp
+L Device:R R2
+U 1 1 5CC4A7CA
+P 1750 1850
+F 0 "R2" V 1750 1850 50  0000 C CNN
+F 1 "66.5ohms" V 1950 1850 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 1680 1850 50  0001 C CNN
+F 3 "~" H 1750 1850 50  0001 C CNN
+	1    1750 1850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1600 1750 1500 1750
+Wire Wire Line
+	1500 1850 1600 1850
+Wire Wire Line
+	1900 1750 1950 1750
+Wire Wire Line
+	1900 1850 1950 1850
+$Comp
+L Device:R R1
+U 1 1 5CC4B639
+P 1750 1750
+F 0 "R1" V 1750 1750 50  0000 C CNN
+F 1 "66.5ohms" V 1900 1750 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P2.54mm_Vertical" V 1680 1750 50  0001 C CNN
+F 3 "~" H 1750 1750 50  0001 C CNN
+	1    1750 1750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6650 1850 7250 1850
+Wire Wire Line
+	6650 1950 6900 1950
+Text GLabel 7300 1850 2    50   Input ~ 0
+D-
+Text GLabel 7300 1950 2    50   Input ~ 0
+D+
+$Comp
+L Device:D_Zener D2
+U 1 1 5CC4D08B
+P 6900 2300
+F 0 "D2" V 6854 2379 50  0000 L CNN
+F 1 "D_Zener" V 6945 2379 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P5.08mm_Vertical_KathodeUp" H 6900 2300 50  0001 C CNN
+F 3 "~" H 6900 2300 50  0001 C CNN
+	1    6900 2300
+	0    -1   1    0   
+$EndComp
+$Comp
+L Device:D_Zener D3
+U 1 1 5CC4D0D0
+P 7250 2250
+F 0 "D3" V 7204 2329 50  0000 L CNN
+F 1 "D_Zener" V 7295 2329 50  0000 L CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P5.08mm_Vertical_KathodeUp" H 7250 2250 50  0001 C CNN
+F 3 "~" H 7250 2250 50  0001 C CNN
+	1    7250 2250
+	0    -1   1    0   
+$EndComp
+Wire Wire Line
+	7250 2100 7250 1850
+Connection ~ 7250 1850
+Wire Wire Line
+	6900 2150 6900 1950
+Connection ~ 6900 1950
+Wire Wire Line
+	7250 2400 7250 2500
+Wire Wire Line
+	7250 2500 7050 2500
+Wire Wire Line
+	6900 2500 6900 2450
+$Comp
+L power:GND #PWR06
+U 1 1 5CC4DF6B
+P 7050 2550
+F 0 "#PWR06" H 7050 2300 50  0001 C CNN
+F 1 "GND" H 7055 2377 50  0000 C CNN
+F 2 "" H 7050 2550 50  0001 C CNN
+F 3 "" H 7050 2550 50  0001 C CNN
+	1    7050 2550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 2550 7050 2500
+Connection ~ 7050 2500
+Wire Wire Line
+	7050 2500 6900 2500
+$Comp
+L Connector:Conn_01x08_Male J3
+U 1 1 5CC4F8F5
+P 8200 1000
+F 0 "J3" V 8035 926 50  0000 C CNN
+F 1 "Conn_01x08_Male" V 8126 926 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 8200 1000 50  0001 C CNN
+F 3 "~" H 8200 1000 50  0001 C CNN
+	1    8200 1000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6650 2050 8500 2050
+Wire Wire Line
+	8500 2050 8500 1200
+Wire Wire Line
+	8400 1200 8400 1950
+Wire Wire Line
+	6900 1950 8400 1950
+Wire Wire Line
+	8300 1200 8300 1850
+Wire Wire Line
+	6650 1750 8200 1750
+Wire Wire Line
+	8200 1750 8200 1200
+Wire Wire Line
+	8100 1200 8100 1650
+Wire Wire Line
+	8100 1650 6650 1650
+Wire Wire Line
+	7250 1850 8300 1850
+Wire Wire Line
+	6650 1550 8000 1550
+Wire Wire Line
+	8000 1550 8000 1200
+Wire Wire Line
+	7800 1300 7800 1200
+Wire Wire Line
+	7450 1300 7800 1300
+Wire Wire Line
+	7900 1200 7900 1400
+Wire Wire Line
+	7900 1400 7350 1400
+$Comp
+L power:GND #PWR07
+U 1 1 5CC565EC
+P 7350 1400
+F 0 "#PWR07" H 7350 1150 50  0001 C CNN
+F 1 "GND" V 7355 1272 50  0000 R CNN
+F 2 "" H 7350 1400 50  0001 C CNN
+F 3 "" H 7350 1400 50  0001 C CNN
+	1    7350 1400
+	0    1    -1   0   
+$EndComp
+Text Label 7750 1300 2    50   ~ 0
+5V_Reg
+Wire Wire Line
+	1200 2150 1200 2400
+NoConn ~ 1100 2150
+$EndSCHEMATC
